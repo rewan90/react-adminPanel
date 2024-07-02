@@ -15,16 +15,19 @@ function App() {
   const Layout = () => {
     return (
       <div className="main">
-        <Navbar />
-        <div className="container">
-          <div className="menuContainer">
-            <Menu />
-          </div>
+      <Navbar />
+      <div className="container">
+        <div className="menuContainer">
+          <Menu />
         </div>
-        <Footer />
+        <div className="contentContainer">
+            <Outlet />
+        </div>
       </div>
-    );
-  };
+      <Footer />
+    </div>
+  );
+};
 
   const router = createBrowserRouter([
     {
